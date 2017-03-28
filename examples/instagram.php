@@ -38,11 +38,8 @@ $scopes = array('basic', 'comments', 'relationships', 'likes');
 $instagramService = $serviceFactory->createService('instagram', $credentials, $storage, $scopes);
 
 if (!empty($_GET['code'])) {
-    // retrieve the CSRF state parameter
-    $state = isset($_GET['state']) ? $_GET['state'] : null;
-
     // This was a callback request from Instagram, get the token
-    $instagramService->requestAccessToken($_GET['code'], $state);
+    $instagramService->requestAccessToken($_GET['code']);
 
     // Send a request with it
     $result = json_decode($instagramService->request('users/self'), true);

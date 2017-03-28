@@ -19,19 +19,11 @@ $servicesCredentials = array(
         'key'       => '',
         'secret'    => '',
     ),
-    'battlenet' => array(
-        'key'       => '',
-        'secret'    => '',
-    ),
     'bitbucket' => array(
         'key'       => '',
         'secret'    => '',
     ),
     'bitly' => array(
-        'key'       => '',
-        'secret'    => '',
-    ),
-    'bitrix24' => array(
         'key'       => '',
         'secret'    => '',
     ),
@@ -47,14 +39,6 @@ $servicesCredentials = array(
         'key'       => '',
         'secret'    => '',
     ),
-    'delicious' => array(
-        'key'       => '',
-        'secret'    => '',
-    ),
-    'deezer' => array(
-        'key'       => '',
-        'secret'    => '',
-    ),
     'deviantart' => array(
         'key'       => '',
         'secret'    => '',
@@ -66,10 +50,6 @@ $servicesCredentials = array(
     'etsy' => array(
         'key'       => '',
         'secret'    => '',
-    ),
-    'eveonline' => array(
-        'key' => '',
-        'secret' => '',
     ),
     'facebook' => array(
         'key'       => '',
@@ -119,10 +99,6 @@ $servicesCredentials = array(
         'key'       => '',
         'secret'    => '',
     ),
-    'mondo' => array(
-        'key'       => '',
-        'secret'    => '',
-    ),
     'nest' => array(
         'key'       => '',
         'secret'    => '',
@@ -136,10 +112,6 @@ $servicesCredentials = array(
         'secret'    => '',
     ),
     'paypal' => array(
-        'key'       => '',
-        'secret'    => '',
-    ),
-    'pinterest' => array(
         'key'       => '',
         'secret'    => '',
     ),
@@ -161,10 +133,6 @@ $servicesCredentials = array(
     'runkeeper' => array(
         'key'       => '',
         'secret'    => '',
-    ),
-    'salesforce' => array(
-        'key'       => '',
-        'secret'    => ''
     ),
     'scoopit' => array(
         'key'       => '',

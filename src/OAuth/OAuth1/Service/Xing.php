@@ -73,12 +73,11 @@ class Xing extends AbstractService
     protected function parseAccessTokenResponse($responseBody)
     {
         parse_str($responseBody, $data);
-        $errors = json_decode($responseBody);
 
         if (null === $data || !is_array($data)) {
             throw new TokenResponseException('Unable to parse response.');
-        } elseif ($errors) {
-            throw new TokenResponseException('Error in retrieving token: "' . $errors->error_name . '"');
+        } elseif (isset($data['error'])) {
+            throw new TokenResponseException('Error in retrieving token: "' . $data['error'] . '"');
         }
 
         $token = new StdOAuth1Token();

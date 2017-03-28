@@ -110,9 +110,7 @@ abstract class AbstractService extends BaseAbstractService implements ServiceInt
      * @param  TokenInterface $token
      * @return TokenInterface $token
      */
-    public function refreshAccessToken(TokenInterface $token)
-    {
-    }
+    public function refreshAccessToken(TokenInterface $token){}
 
     /**
      * Sends an authenticated API request to the path provided.
@@ -213,10 +211,10 @@ abstract class AbstractService extends BaseAbstractService implements ServiceInt
 
         $authParameters = array_merge($authParameters, array('oauth_token' => $token->getAccessToken()));
 
-        $signatureParams = (is_array($bodyParams)) ? array_merge($authParameters, $bodyParams) : $authParameters;
-        $authParameters['oauth_signature'] = $this->signature->getSignature($uri, $signatureParams, $method);
+        $authParameters = (is_array($bodyParams)) ? array_merge($authParameters, $bodyParams) : $authParameters;
+        $authParameters['oauth_signature'] = $this->signature->getSignature($uri, $authParameters, $method);
 
-        if (is_array($bodyParams) && isset($bodyParams['oauth_session_handle'])) {
+        if (isset($bodyParams['oauth_session_handle'])) {
             $authParameters['oauth_session_handle'] = $bodyParams['oauth_session_handle'];
             unset($bodyParams['oauth_session_handle']);
         }

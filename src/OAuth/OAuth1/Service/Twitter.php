@@ -100,11 +100,9 @@ class Twitter extends AbstractService
         parse_str($responseBody, $data);
 
         if (null === $data || !is_array($data)) {
-            throw new TokenResponseException('Unable to parse response: ' . $responseBody);
+            throw new TokenResponseException('Unable to parse response.');
         } elseif (isset($data['error'])) {
             throw new TokenResponseException('Error in retrieving token: "' . $data['error'] . '"');
-        } elseif (!isset($data["oauth_token"]) || !isset($data["oauth_token_secret"])) {
-            throw new TokenResponseException('Invalid response. OAuth Token data not set: ' . $responseBody);
         }
 
         $token = new StdOAuth1Token();
