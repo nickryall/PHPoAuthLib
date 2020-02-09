@@ -49,7 +49,6 @@ class Facebook extends AbstractService
     const SCOPE_MANAGE_FRIENDLIST             = 'manage_friendlists';
     const SCOPE_MANAGE_NOTIFICATIONS          = 'manage_notifications';
     const SCOPE_PHOTO_UPLOAD                  = 'photo_upload';
-    const SCOPE_PUBLISH_ACTIONS               = 'publish_actions';
     const SCOPE_PUBLISH_CHECKINS              = 'publish_checkins';
     const SCOPE_PUBLISH_STREAM                = 'publish_stream';
     const SCOPE_RSVP_EVENT                    = 'rsvp_event';
